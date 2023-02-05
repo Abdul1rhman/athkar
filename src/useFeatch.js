@@ -10,7 +10,7 @@ const useFetch = (t,lin)=>{
   
   
   useEffect(()=>{
-    fetch('http://www.hisnmuslim.com/api/ar/'+lin+'.json')
+    fetch('https://www.hisnmuslim.com/api/ar/'+lin+'.json')
       .then(data=>{
         if(!data.ok){
           throw Error('Couldn\'t connect to BlogsLIST server');
