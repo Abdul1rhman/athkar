@@ -17,7 +17,7 @@ function App() {
         <Nav/>
         
         <Switch>
-          <Route exact path='/'>
+          <Route exact path='/athkar'>
               <Home/>
           </Route>
 
