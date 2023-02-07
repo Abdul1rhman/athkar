@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/athkar/static/css/main.9b4e0b6e.css",
-    "main.js": "/athkar/static/js/main.2d8256cb.js",
+    "main.css": "/athkar/static/css/main.8664d0f6.css",
+    "main.js": "/athkar/static/js/main.2919a1d2.js",
     "index.html": "/athkar/index.html",
-    "main.9b4e0b6e.css.map": "/athkar/static/css/main.9b4e0b6e.css.map",
-    "main.2d8256cb.js.map": "/athkar/static/js/main.2d8256cb.js.map"
+    "main.8664d0f6.css.map": "/athkar/static/css/main.8664d0f6.css.map",
+    "main.2919a1d2.js.map": "/athkar/static/js/main.2919a1d2.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b4e0b6e.css",
-    "static/js/main.2d8256cb.js"
+    "static/css/main.8664d0f6.css",
+    "static/js/main.2919a1d2.js"
   ]
 }
