@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { AiOutlineArrowUp } from 'react-icons/ai';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 function BacktoTop() {
     const [bot, setBot]= useState(false)
+    const element = <FontAwesomeIcon icon={faArrowUp} />
     useEffect(()=>{
         window.addEventListener('scroll',()=>{
             if(window.scrollY>1000){
@@ -20,7 +23,7 @@ function BacktoTop() {
       
     return ( 
       <div >
-        {bot&&<button className='Back' onClick={handel}> <AiOutlineArrowUp/> </button>}
+        {bot&&<button className='Back' onClick={handel}>{element}</button>}
   
       </div>
     )
