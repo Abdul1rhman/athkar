@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { AiOutlineArrowUp } from 'react-icons/ai';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 function BacktoTop() {
@@ -23,7 +22,7 @@ function BacktoTop() {
       
     return ( 
       <div >
-        {bot&&<button className='Back' onClick={handel}>{element}</button>}
+        {bot&&<div className='Back' onClick={handel}>{element}</div>}
   
       </div>
     )
