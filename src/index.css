@@ -49,6 +49,20 @@ padding: 20px;
 border-radius: 10px;
 }
 
+.search{
+  /* width: 50%; */
+  height: 10px;
+  border-radius: 50px;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid gray;
+}
+
+.counter{
+  background-color: brown;
+  padding: 5px;
+}
+
 .dhker{
   background-color: aliceblue;
   padding: 20px;

@@ -2,17 +2,16 @@ import React, { useEffect, useState } from 'react'
 import ReactAudioPlayer from 'react-audio-player';
 
 function Maker({data , handelClick,text}) {
- const [num, setNum]=useState(0)
-  
- const handeText=(text)=>{
-    
- }
+ 
+
+ 
     return (
     <div className='adhker-cat1'>
         {data.map(dkher =>(
             <div className="dhker1" key={dkher.ID}>
               {/* {dkher.title && <h4>( {dkher.ARABIC_TEXT} )</h4>} */}
               <p style={{fontSize:text}}>{dkher.ARABIC_TEXT}</p>
+              {/* {dkher.REPEAT===1?'':<p className='counter' onClick={()=>handelCount(dkher.ID)}>{dkher.REPEAT}</p>} */}
               <ReactAudioPlayer
                 src={dkher.AUDIO}
                 controls/>

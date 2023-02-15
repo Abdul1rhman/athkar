@@ -11,7 +11,7 @@ function Home() {
   const his = useHistory();
 
   const [caty, setCaty]=useState([])
-  
+  const [search, setSearch]=useState('')
     
     const handeClick=(data,id)=>{
       his.push('/'+data+'/'+id)
@@ -38,8 +38,15 @@ function Home() {
         
         {/* <h2 className="topic">اذكار:</h2> */}
         <div className="adhker-cat" >
+        
+        <input type="text" className='search' value={search} onChange={(e)=>setSearch(e.target.value)} placeholder={'بحث...'}/>
 
-        {caty.map(dkher =>(
+        {caty.filter(item =>{
+          return search===""?item 
+          : item.TITLE.includes(search)
+          
+
+        }).map(dkher =>(
             <div className="dhker" key={dkher.ID} onClick={()=>handeClick(dkher.TITLE,dkher.ID)}>
               <h3>{dkher.TITLE}</h3>
               
