@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/athkar/static/css/main.6a6d2540.css",
+    "main.css": "/athkar/static/css/main.0f1a8813.css",
     "main.js": "/athkar/static/js/main.57815210.js",
     "index.html": "/athkar/index.html",
-    "main.6a6d2540.css.map": "/athkar/static/css/main.6a6d2540.css.map",
+    "main.0f1a8813.css.map": "/athkar/static/css/main.0f1a8813.css.map",
     "main.57815210.js.map": "/athkar/static/js/main.57815210.js.map"
   },
   "entrypoints": [
-    "static/css/main.6a6d2540.css",
+    "static/css/main.0f1a8813.css",
     "static/js/main.57815210.js"
   ]
 }
