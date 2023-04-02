@@ -60,9 +60,13 @@ border-radius: 10px;
 
 .counter{
   /* background-color: brown; */
-  padding: 5px;
+  /* padding: 5px; */
   font-size: 20px;
   font-weight: bold;
+  background-color:#7AA874;
+  text-align: center;
+  border-radius: 10px;
+  width: 35px;
 }
 
 .dhker{
