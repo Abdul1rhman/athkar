@@ -17,19 +17,17 @@ function App() {
         <Nav/>
         
         <Switch>
-          <Route exact path='/athkar'>
+          <Route exact path='/athkar' component={Home}>
               <Home/>
           </Route>
 
-          <Route exact path='/:title/:id'>
+          <Route exact path='/:title/:id'component={Cat1} >
               <Cat1/>
           </Route>
 
           
 
-          <Route exact path='/adhan'>
-             <Adhan/>
-          </Route>
+          
 
         </Switch>
 
