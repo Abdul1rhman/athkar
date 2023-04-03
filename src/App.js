@@ -17,7 +17,7 @@ function App() {
         <Nav/>
         
         <Switch>
-          <Route exact path='/athkar' component={Home}>
+          <Route exact path='/' component={Home}>
               <Home/>
           </Route>
 
