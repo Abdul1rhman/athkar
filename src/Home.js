@@ -5,13 +5,33 @@ import { AiOutlineArrowLeft } from 'react-icons/ai';
 import { useState, useEffect} from "react";
 import { useHistory } from 'react-router-dom';
 import BacktoTop from './BacktoTop';
-
+import Fuse from 'fuse.js';
 
 function Home() {
   const his = useHistory();
 
   const [caty, setCaty]=useState([])
-  const [search, setSearch]=useState('')
+  
+
+  const [query, setQuery]=useState('')
+
+  const fuse = new Fuse(caty,{
+    keys: [
+      'TITLE'
+    ],
+    threshold: 0.3,
+  includeMatches: true,
+  ignoreLocation: true, // for right-to-left text direction
+  ignoreDiacritics: true // for handling diacritical marks
+  })
+
+  const results = fuse.search(query);
+  const resList = query? results.map(result=>result.item):caty
+
+  function handelSearch(query){
+    
+    setQuery(query)
+  }
     
     const handeClick=(data,id)=>{
       his.push('/'+data+'/'+id)
@@ -39,14 +59,9 @@ function Home() {
         {/* <h2 className="topic">اذكار:</h2> */}
         <div className="adhker-cat" >
         
-        <input type="text" className='search' value={search} onChange={(e)=>setSearch(e.target.value)} placeholder={'بحث...'}/>
+        <input type="text" className='search' value={query} onChange={e=>handelSearch(e.target.value)} placeholder={'بحث...'}/>
 
-        {caty.filter(item =>{
-          return search===""?item 
-          : item.TITLE.includes(search)
-          
-
-        }).map(dkher =>(
+        { resList.length===0?<div style={{height:'1000px', backgroundColor:"inherit",position:"relative",textAlign:'center'}}><h1>جرب عبارة أخرى</h1></div> :resList.map(dkher =>(
             <div className="dhker" key={dkher.ID} onClick={()=>handeClick(dkher.TITLE,dkher.ID)}>
               <h3>{dkher.TITLE}</h3>
               
