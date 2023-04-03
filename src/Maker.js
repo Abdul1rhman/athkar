@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ReactAudioPlayer from 'react-audio-player';
-
+import { CircularProgressbar,buildStyles  } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 function Maker({data , handelClick,text}) {
   
   // const [list2, setList2] = useState([]);
@@ -51,13 +52,31 @@ const handleIncrement=(index,limit)=>{
     
 }
 
+
     return (
     <div className='adhker-cat1'>
         {data.map((dkher, index) =>(
             <div className={`dhker1 ${count[index].co===dkher.REPEAT? "done":''}`} key={dkher.ID} onClick={() => handleIncrement(index,dkher.REPEAT)}>
               {/* {dkher.title && <h4>( {dkher.ARABIC_TEXT} )</h4>} */}
               <p style={{fontSize:text}}>{dkher.ARABIC_TEXT}</p>
-              {dkher.REPEAT===1?'':<p className='counter' >{count[index].co}</p>}
+              {/* {dkher.REPEAT===1?'':<p className='counter' >{count[index].co}</p>} */}
+              
+              <div style={{ width: '70px',marginBottom:'30px' }}>
+              {dkher.REPEAT===1?'':<CircularProgressbar 
+              value={count[index].co} 
+              maxValue={dkher.REPEAT} 
+              text={`${count[index].co}`}
+              styles={buildStyles({
+                textSize: '25px',
+                
+            pathColor: `#7AA874`,
+            textColor: 'black',
+            trailColor: '#d6d6d6',
+            backgroundColor: '#3e98c7', 
+            })}
+              />}
+              </div>
+
               <ReactAudioPlayer
                 src={dkher.AUDIO}
                 controls/>
