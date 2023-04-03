@@ -6,7 +6,7 @@ function Nav() {
         <nav>
             <h2>اذكاري</h2>
             <div className='Links'>
-                <Link to="/athkar">الرئيسية</Link>
+                <Link to="/">الرئيسية</Link>
                 
             </div>
             
