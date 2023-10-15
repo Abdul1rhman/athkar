@@ -41,7 +41,7 @@ function Home() {
       axios.get('//www.hisnmuslim.com/api/ar/husn_ar.json')
       .then(res=>{
         // console.log(res.data.العربية.sort(function(a, b){return a - b}))
-        setCaty(res.data.العربية.filter(item=>item.TITLE !=='الدعاء قبل إتيان الزوجة'))
+        setCaty(res.data.العربية.filter(item=>item.ID !==81))
         
         // console.log(caty.slice(0, 3));
          
